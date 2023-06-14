@@ -45,7 +45,7 @@ game.bop = {
       game.activeMole = -1;
       this.bopped = true;
 
-      if (this.total >= 5) {
+      if (this.total >= 30) {
 
         alert('Parabéns, você venceu!\nPara recomeçar, clique em OK.');
         this.total = 0;

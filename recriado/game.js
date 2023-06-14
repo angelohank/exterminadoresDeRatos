@@ -9,9 +9,12 @@ game.update = function(dt) {
   atom.currentMoleTime = atom.currentMoleTime + dt;
   if (atom.currentMoleTime > atom.tillNewMole){
     game.activeMole = Math.floor(Math.random()*4);
+    const numeroRandomico = Math.floor(Math.random() * 10) + 1;
+    game.mole.type = numeroRandomico <= 7 ? 1 : 2;
+    game.mole.qtLife = game.mole.type;
     atom.currentMoleTime = 0;
     if(game.bop.bopped === false){
-      game.bop.total = game.bop.total-1;
+      game.bop.total = Math.max(0, game.bop.total-1);
     }
     else{
       game.bop.bopped = false;
@@ -33,19 +36,33 @@ game.bop = {
   },
   with_key: function(key){
     if (!!(game.activeMole + 1) === true && key === game.holes[game.activeMole].label){
-      var som = new Audio();
-      som.src = 'resources/sounds/damage.mp3';
-      som.play();
+      if (game.mole.qtLife > 1) {
+        game.mole.qtLife -= 1;
+        return;
+      }
 
       this.total = this.total+1;
       game.activeMole = -1;
       this.bopped = true;
+
+      if (this.total >= 5) {
+
+        alert('Parabéns, você venceu!\nPara recomeçar, clique em OK.');
+        this.total = 0;
+
+      } else {
+
+        var som = new Audio();
+        som.src = 'resources/sounds/damage.mp3';
+        som.play();
+
+      }
     }
     else{
       var som = new Audio();
       som.src = 'resources/sounds/errou.mp3';
       som.play();
-      this.total = this.total-1;
+      this.total = Math.max(0, this.total-1);
     }
   }
 }
@@ -126,6 +143,8 @@ game.mole = {
   eyeSize: 5,
   eyeOffset: 10, 
   eyeColor: "#000",
+  eyeColorType2: "#F00",
+  type: 1,
   draw: function(xPosition, yPosition){
     this.drawHead(xPosition, yPosition);
     this.drawEyes(xPosition, yPosition);
@@ -145,12 +164,14 @@ game.mole = {
     atom.context.fill();
   },
   drawEyes: function(xPosition, yPosition){
+    var colorEye = this.type == 1 ? this.eyeColor : this.eyeColorType2;
+
     atom.context.beginPath(); 
-    atom.context.fillStyle = this.eyeColor;
+    atom.context.fillStyle = colorEye;
     atom.context.arc(xPosition + this.eyeOffset, yPosition - this.eyeOffset, this.eyeSize, 0, Math.PI*2); 
     atom.context.fill();
     atom.context.beginPath(); 
-    atom.context.fillStyle = this.eyeColor;
+    atom.context.fillStyle = colorEye;
     atom.context.arc(xPosition - this.eyeOffset, yPosition - this.eyeOffset, this.eyeSize, 0, Math.PI*2); 
     atom.context.fill();
   },

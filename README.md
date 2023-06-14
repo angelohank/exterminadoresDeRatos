@@ -28,7 +28,7 @@
         - colocar buracos de terra
         - colocar rato de verdade
         - colocar sol de verdade
-- Modifique ou acrescente regras;
+- Modifique ou acrescente regras; (OK)
     - rato diferente precisa clicar 2x para matar
     - ao chegar em 30 ganha
 - Aprimore ou mude o storytellyng;

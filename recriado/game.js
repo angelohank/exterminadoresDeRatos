@@ -33,11 +33,18 @@ game.bop = {
   },
   with_key: function(key){
     if (!!(game.activeMole + 1) === true && key === game.holes[game.activeMole].label){
+      var som = new Audio();
+      som.src = 'resources/sounds/damage.mp3';
+      som.play();
+
       this.total = this.total+1;
       game.activeMole = -1;
       this.bopped = true;
     }
     else{
+      var som = new Audio();
+      som.src = 'resources/sounds/errou.mp3';
+      som.play();
       this.total = this.total-1;
     }
   }

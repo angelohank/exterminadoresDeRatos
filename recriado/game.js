@@ -103,7 +103,15 @@ game.hole = {
 };
 game.drawBackground = function(){
   atom.context.beginPath();
-  atom.context.fillStyle = '#34e';
+
+  var backgroundImage = new Image();
+  backgroundImage.src = 'ceu.jpg';
+  
+  var pattern = atom.context.createPattern(backgroundImage, 'repeat');
+  atom.context.fillStyle = pattern;
+
+  atom.context.fillRect(0, 0, atom.width, atom.height/2);
+
   atom.context.fillRect(0, 0, atom.width, atom.height/2);
   atom.context.fillStyle = '#ee3';
   atom.context.arc(140, atom.height/2 -30, 90, Math.PI*2, 0); 

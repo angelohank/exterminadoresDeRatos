@@ -8,7 +8,12 @@ atom.tillNewMole = 2;
 game.update = function(dt) {
   atom.currentMoleTime = atom.currentMoleTime + dt;
   if (atom.currentMoleTime > atom.tillNewMole){
-    game.activeMole = Math.floor(Math.random()*4);
+    var oldMole = game.activeMole;
+
+    while ( oldMole == game.activeMole ) {
+      game.activeMole = Math.floor(Math.random()*4);
+    }
+
     const numeroRandomico = Math.floor(Math.random() * 10) + 1;
     game.mole.type = numeroRandomico <= 7 ? 1 : 2;
     game.mole.qtLife = game.mole.type;

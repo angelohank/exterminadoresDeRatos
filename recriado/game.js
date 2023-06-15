@@ -47,8 +47,11 @@ game.bop = {
 
       if (this.total >= 30) {
 
-        alert('Parabéns, você venceu!\nPara recomeçar, clique em OK.');
-        this.total = 0;
+        var currentPath = window.location.pathname;
+        var currentDirectory = currentPath.substring(0, currentPath.lastIndexOf("/"));
+        var destinationPage = currentDirectory + "/end.html";
+
+        window.location.href = destinationPage;
 
       } else {
 

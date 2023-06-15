@@ -3,8 +3,17 @@ game.keys = ['A', 'S', 'D', 'F'];
 for (var i = 0; i < game.keys.length; i++){
   atom.input.bind(atom.key[game.keys[i]], game.keys[i]);
 };
+
+var queryString = window.location.search;
+var params = new URLSearchParams(queryString);
+var velocity = params.get("velocity");
+
+if ( !velocity ) {
+  velocity = 2;
+}
+
 atom.currentMoleTime = 0;
-atom.tillNewMole = 2;
+atom.tillNewMole = velocity;
 game.update = function(dt) {
   atom.currentMoleTime = atom.currentMoleTime + dt;
   if (atom.currentMoleTime > atom.tillNewMole){

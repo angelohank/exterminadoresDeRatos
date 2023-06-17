@@ -145,19 +145,21 @@ game.hole = {
 game.drawBackground = function(){
   atom.context.beginPath();
 
-  var backgroundImage = new Image();
-  backgroundImage.src = 'ceu.jpg';
+  var skyImage = new Image();
+  skyImage.src = 'ceu.jpg';
   
-  var pattern = atom.context.createPattern(backgroundImage, 'repeat');
+  var pattern = atom.context.createPattern(skyImage, 'repeat');
   atom.context.fillStyle = pattern;
-
   atom.context.fillRect(0, 0, atom.width, atom.height/2);
 
-  atom.context.fillRect(0, 0, atom.width, atom.height/2);
-  atom.context.fillStyle = '#ee3';
   atom.context.arc(140, atom.height/2 -30, 90, Math.PI*2, 0); 
   atom.context.fill();
-  atom.context.fillStyle = '#2e2';
+  
+  var gramaImg = new Image();
+  gramaImg.src = 'grama.jpg';
+  var pattern = atom.context.createPattern(gramaImg, 'repeat');
+  atom.context.fillStyle = pattern;
+  
   atom.context.fillRect(0, atom.height/2, atom.width, atom.height/2);
 };
 game.mole = {

@@ -16,26 +16,30 @@
 
 <!--Todo: Adicionar documentação do jogo. Comandos, sons, etc-->
 
-## TODOs
+## Pronto
 
 - Alterações estéticas e sonoras
     - sonoras (OK)
         - colocar uma musica quando errar a martelada
         - musica quando matar o bixinho
+- Modifique ou acrescente regras; (OK)
+    - rato diferente precisa clicar 2x para matar
+    - ao chegar em 30 ganha
+- Aprimore ou mude o storytellyng; (OK)
+    - Criar uma historia que pede antes de iniciar, do tipo, o mundo esta infestado de ratos...
+- Aprimore a jogabilidade, etc... (OK)
+    - ter nivel de dificuldade
+
+## TODOs
+
+- Alterações estéticas e sonoras
     - esteticas
         - colocar imagem de ceu
         - colocar imagem de grama
         - colocar buracos de terra
         - colocar rato de verdade
         - colocar sol de verdade
-- Modifique ou acrescente regras;
-    - rato diferente precisa clicar 2x para matar
-    - ao chegar em 30 ganha
-- Aprimore ou mude o storytellyng;
-    - Criar uma historia que pede antes de iniciar, do tipo, o mundo esta infestado de ratos...
-- Aprimore a jogabilidade, etc.
-    - as letras so posicionam o martelo... precisa clicar espaco para matar
-    - ter nivel de dificuldade
+- Aprimore a jogabilidade, etc...
     - a cada x minutos ficar denoite
 - Criar GDD
     - De 10 paginas

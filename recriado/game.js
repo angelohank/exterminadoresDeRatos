@@ -142,26 +142,35 @@ game.hole = {
     game.mole.draw(xPosition, yPosition);
   }
 };
+
 game.drawBackground = function(){
   atom.context.beginPath();
 
-  var skyImage = new Image();
-  skyImage.src = 'ceu.jpg';
-  
-  var pattern = atom.context.createPattern(skyImage, 'repeat');
-  atom.context.fillStyle = pattern;
-  atom.context.fillRect(0, 0, atom.width, atom.height/2);
+  var background = new Image();
+  //background.src = "dia.png";
+  var imgSources = ["resources/img/dia.png", "resources/img/noite.png"];
 
-  atom.context.arc(140, atom.height/2 -30, 90, Math.PI*2, 0); 
-  atom.context.fill();
+  var currentIndex = 0;
+
+  function loadNextBackgroundImage() {
+    background.src = imgSources[currentIndex];
+    currentIndex = (currentIndex + 1) % imgSources.length;
+  }
+
+  loadNextBackgroundImage();
   
-  var gramaImg = new Image();
-  gramaImg.src = 'grama.jpg';
-  var pattern = atom.context.createPattern(gramaImg, 'repeat');
+  var pattern = atom.context.createPattern(background, 'repeat');
   atom.context.fillStyle = pattern;
+  atom.context.fillRect(0, 0, atom.width, atom.height);
+
+  setInterval(function() {
+    loadNextBackgroundImage();
+    atom.context.fillStyle = atom.context.createPattern(background, 'repeat');
+    atom.context.fillRect(0, 0, atom.width, atom.height);
+  }, 20000);
   
-  atom.context.fillRect(0, atom.height/2, atom.width, atom.height/2);
 };
+
 game.mole = {
   size: 40,
   color: '#557',

@@ -143,32 +143,28 @@ game.hole = {
   }
 };
 
+var dia = true;
+const qtSegundosDia = 20;
+var dhLastBackground = new Date();
+var backgroundImageDia = "resources/img/dia.png";
+var backgroundImageNoite = "resources/img/noite.png";
+
 game.drawBackground = function(){
+  var diferencaEmSegundos = Math.floor( ( new Date - dhLastBackground ) / 1000 );
+
+  if ( diferencaEmSegundos >=  qtSegundosDia ) {
+    dia = !dia;
+    dhLastBackground = new Date()
+  }
+
   atom.context.beginPath();
 
   var background = new Image();
-  //background.src = "dia.png";
-  var imgSources = ["resources/img/dia.png", "resources/img/noite.png"];
-
-  var currentIndex = 0;
-
-  function loadNextBackgroundImage() {
-    background.src = imgSources[currentIndex];
-    currentIndex = (currentIndex + 1) % imgSources.length;
-  }
-
-  loadNextBackgroundImage();
+  background.src = dia ? backgroundImageDia : backgroundImageNoite;
   
   var pattern = atom.context.createPattern(background, 'repeat');
   atom.context.fillStyle = pattern;
   atom.context.fillRect(0, 0, atom.width, atom.height);
-
-  setInterval(function() {
-    loadNextBackgroundImage();
-    atom.context.fillStyle = atom.context.createPattern(background, 'repeat');
-    atom.context.fillRect(0, 0, atom.width, atom.height);
-  }, 20000);
-  
 };
 
 game.mole = {

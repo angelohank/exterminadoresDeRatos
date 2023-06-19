@@ -29,19 +29,21 @@
     - Criar uma historia que pede antes de iniciar, do tipo, o mundo esta infestado de ratos...
 - Aprimore a jogabilidade, etc... (OK)
     - ter nivel de dificuldade
+- Criar GDD
+    - De 10 paginas
+- Alterações estéticas e sonoras
+    - esteticas
+        - colocar imagem de ceu
+        - colocar imagem de grama
+        - colocar sol de verdade
 
 ## TODOs
 
 - Alterações estéticas e sonoras
     - esteticas
-        - colocar imagem de ceu
-        - colocar imagem de grama
         - colocar buracos de terra
         - colocar rato de verdade
-        - colocar sol de verdade
 - Aprimore a jogabilidade, etc...
     - a cada x minutos ficar denoite
-- Criar GDD
-    - De 10 paginas
 - slides
     - Criar slides

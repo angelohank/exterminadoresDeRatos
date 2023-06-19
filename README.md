@@ -36,14 +36,17 @@
         - colocar imagem de ceu
         - colocar imagem de grama
         - colocar sol de verdade
+- Aprimore a jogabilidade, etc...
+    - a cada x minutos ficar denoite
 
 ## TODOs
 
-- Alterações estéticas e sonoras
-    - esteticas
-        - colocar buracos de terra
-        - colocar rato de verdade
-- Aprimore a jogabilidade, etc...
-    - a cada x minutos ficar denoite
 - slides
     - Criar slides
+- video do pitch
+- enviar no moodle
+    - pdf slides
+    - pdf gdd
+    - link video
+    - link github
+    - nome dos participantes

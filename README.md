@@ -19,29 +19,31 @@
 ## Pronto
 
 - Alterações estéticas e sonoras
-    - sonoras (OK)
+    - sonoras
         - colocar uma musica quando errar a martelada
         - musica quando matar o bixinho
-- Modifique ou acrescente regras; (OK)
+- Modifique ou acrescente regras;
     - rato diferente precisa clicar 2x para matar
     - ao chegar em 30 ganha
-- Aprimore ou mude o storytellyng; (OK)
+- Aprimore ou mude o storytellyng;
     - Criar uma historia que pede antes de iniciar, do tipo, o mundo esta infestado de ratos...
-- Aprimore a jogabilidade, etc... (OK)
+- Aprimore a jogabilidade, etc...
     - ter nivel de dificuldade
+- Criar GDD
+    - De 10 paginas
+- Alterações estéticas e sonoras
+    - esteticas
+        - colocar imagem de ceu
+        - colocar imagem de grama
+        - colocar sol de verdade
 
 ## TODOs
 
 - Alterações estéticas e sonoras
     - esteticas
-        - colocar imagem de ceu
-        - colocar imagem de grama
         - colocar buracos de terra
         - colocar rato de verdade
-        - colocar sol de verdade
 - Aprimore a jogabilidade, etc...
     - a cada x minutos ficar denoite
-- Criar GDD
-    - De 10 paginas
 - slides
     - Criar slides

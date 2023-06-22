@@ -38,15 +38,13 @@
         - colocar sol de verdade
 - Aprimore a jogabilidade, etc...
     - a cada x minutos ficar denoite
-
-## TODOs
-
 - slides
     - Criar slides
 - video do pitch
 - enviar no moodle
     - pdf slides
     - pdf gdd
-    - link video
-    - link github
+    - video
+    - codigo fonte
     - nome dos participantes
+
